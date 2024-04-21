@@ -38,7 +38,7 @@ export default function Home() {
           maxSize={1}
           particleDensity={1200}
           className="w-full h-full"
-          particleColor="#ff0000"
+          particleColor="#FFFFFF"
         />
 
         {/* Radial Gradient to prevent sharp edges */}
