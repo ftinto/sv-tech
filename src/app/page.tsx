@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image";
 import { SparklesCore } from "./ui/components/sparkles";
 import Link from "next/link";
 
@@ -8,18 +7,18 @@ export default function Home() {
   return (
     <div className="h-screen w-full bg-black flex flex-col items-center justify-center overflow-hidden">
       <div className="flex gap-10 buttons-wrapper mb-20">
-        <button className="p-[3px] relative">
+        <Link href="/login" className="p-[3px] relative">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
           <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
             Login
           </div>
-        </button>
-        <button className="p-[3px] relative">
+        </Link>
+        <Link href="/register" className="p-[3px] relative">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
           <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
             <div>Getting started</div>
           </div> 
-        </button>
+        </Link>
       </div>
       <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative">
         SV-Tech
