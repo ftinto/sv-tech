@@ -46,9 +46,6 @@ const LoginContainer = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('login');
-    console.log(email);
-    console.log(password);
   };
 
   return (
