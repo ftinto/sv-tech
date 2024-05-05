@@ -1,4 +1,5 @@
 'use client'
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
 const LoginFields = ({
@@ -19,14 +20,14 @@ const LoginFields = ({
       <input
         className='bg-white text-black p-2 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-indigo-500'
         type='email'
-        placeholder='email'
+        placeholder='Email'
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
       <input
         className='bg-white text-black p-2 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-indigo-500'
         type='password'
-        placeholder='password'
+        placeholder='Password'
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
@@ -41,11 +42,13 @@ const LoginFields = ({
 };
 
 const LoginContainer = () => {
+  const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    router.push('/dashboard')
   };
 
   return (
